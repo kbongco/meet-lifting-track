@@ -1,0 +1,109 @@
+// variables.scss
+
+// ------------------------
+// Colors
+// ------------------------
+$color-bg: #080c10;       // Page background
+$color-panel: #0d1117;    // Sidebar, header, cards
+$color-panel-2: #131920;  // Inset surfaces, inputs
+$color-border: #1e2a35;   // Primary borders
+$color-border-2: #243040; // Hover borders
+$color-accent: #00d4ff;   // Active states, highlights, links
+$color-good: #00e676;     // Good lifts, live status, clock
+$color-bad: #ff3d4a;      // No lifts, missed attempts
+$color-warn: #ffaa00;     // Upcoming, on-deck, delays
+$color-text: #e8f0f8;     // Primary text
+$color-text-muted: #4a6070; // Secondary text, labels
+$color-text-muted-2: #2a3848; // Disabled, empty states
+$color-gold: #ffd700;     // 1st place, records, leaders
+
+// Optional color maps for loops
+$colors: (
+  bg: $color-bg,
+  panel: $color-panel,
+  panel-2: $color-panel-2,
+  border: $color-border,
+  border-2: $color-border-2,
+  accent: $color-accent,
+  good: $color-good,
+  bad: $color-bad,
+  warn: $color-warn,
+  text: $color-text,
+  muted: $color-text-muted,
+  muted-2: $color-text-muted-2,
+  gold: $color-gold
+);
+
+// ------------------------
+// Fonts
+// ------------------------
+// Make sure to import these fonts via <link> or @import in your main SCSS
+$font-display: "Rajdhani", sans-serif;       // 400, 500, 600, 700
+$font-body: "Inter", sans-serif;             // 300, 400, 500, 600
+$font-mono: "JetBrains Mono", monospace;    // 400, 600
+
+// Font weight variables
+$weight-display-regular: 400;
+$weight-display-medium: 500;
+$weight-display-semibold: 600;
+$weight-display-bold: 700;
+
+$weight-body-light: 300;
+$weight-body-regular: 400;
+$weight-body-medium: 500;
+$weight-body-semibold: 600;
+
+$weight-mono-regular: 400;
+$weight-mono-semibold: 600;
+
+// ------------------------
+// Utility placeholders / mixins
+// ------------------------
+%font-display {
+  font-family: $font-display;
+}
+
+%font-body {
+  font-family: $font-body;
+}
+
+%font-mono {
+  font-family: $font-mono;
+}
+
+%min-h-screen {
+  min-height: 100vh;
+}
+
+// Optional mixin for colors
+@mixin color-bg { background-color: $color-bg; }
+@mixin color-panel { background-color: $color-panel; }
+@mixin color-panel-2 { background-color: $color-panel-2; }
+@mixin color-border { border-color: $color-border; }
+@mixin color-border-2 { border-color: $color-border-2; }
+@mixin color-accent { color: $color-accent; }
+@mixin color-good { color: $color-good; }
+@mixin color-bad { color: $color-bad; }
+@mixin color-warn { color: $color-warn; }
+@mixin color-text { color: $color-text; }
+@mixin color-text-muted { color: $color-text-muted; }
+@mixin color-text-muted-2 { color: $color-text-muted-2; }
+@mixin color-gold { color: $color-gold; }
+
+// ------------------------
+// Example usage
+// ------------------------
+/*
+.header {
+  @extend %font-display;
+  @extend %min-h-screen;
+  @include color-bg;
+  color: $color-text;
+}
+
+.button {
+  @extend %font-body;
+  background-color: $color-accent;
+  color: $color-text;
+}
+*/

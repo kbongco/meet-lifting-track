@@ -1,0 +1,8 @@
+@import './variables';
+
+body {
+  @extend %font-body;
+  @include color-bg;
+  color: $color-text;
+  min-height: 100vh;
+}
