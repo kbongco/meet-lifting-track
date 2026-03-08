@@ -1,0 +1,18 @@
+@import './variables';
+/* Import Rajdhani, Inter, JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+body {
+  font-family: $font-body;
+  background-color: $color-bg;
+  color: $color-text;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .display-text {
+  font-family: $font-display;
+}
+
+code, .mono {
+  font-family: $font-mono;
+}
