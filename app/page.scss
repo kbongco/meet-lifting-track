@@ -1,3 +1,6 @@
+@import '../app/styles/variables.scss';
+
 .test {
   font-size: 10rem;
+  color: $color-good;
 }
