@@ -89,6 +89,15 @@ $weight-mono-semibold: 600;
 @mixin color-text-muted { color: $color-text-muted; }
 @mixin color-text-muted-2 { color: $color-text-muted-2; }
 @mixin color-gold { color: $color-gold; }
+@mixin tinted-button($color, $bg-opacity: 0.15, $border-opacity: 0.3, $hover-opacity: 0.25) {
+  background: rgba($color, $bg-opacity);
+  border: 1px solid rgba($color, $border-opacity);
+  color: $color;
+
+  &:hover {
+    background: rgba($color, $hover-opacity);
+  }
+}
 
 // ------------------------
 // Example usage

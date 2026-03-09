@@ -5,7 +5,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 export interface BadgeProps {
   children: React.ReactNode;
-  badgeType: BadgeType;
+  badgeType?: BadgeType;
 }
 
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"

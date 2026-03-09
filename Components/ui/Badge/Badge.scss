@@ -1,0 +1,30 @@
+@import "../../../app/styles/globals.scss";
+@import "../../../app/styles/variables.scss";
+
+.chbi-lifting-span {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-family: $font-body;
+  font-size: 0.625rem;
+  font-weight: $weight-body-semibold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &--success {
+    @include tinted-button($color-good);
+  }
+
+  &--warning {
+    @include tinted-button($color-warn);
+  }
+
+  &--neutral {
+    @include tinted-button($color-text-muted);
+  }
+
+  &--danger {
+    @include tinted-button($color-bad);
+  }
+}
