@@ -8,5 +8,18 @@ export interface BadgeProps {
   badgeType?: BadgeType;
 }
 
+export interface CardProps {
+  children: React.ReactNode;
+}
+
+export interface CardHeaderProps {
+  title: string;
+  extraButton?: React.ReactNode;
+}
+
+export interface CardBodyProps {
+  children: React.ReactNode;
+}
+
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
-export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger'
+export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger' | 'completed'
