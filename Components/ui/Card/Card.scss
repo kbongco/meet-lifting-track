@@ -1,0 +1,33 @@
+@import "../../../app/styles/globals.scss";
+@import "../../../app/styles/variables.scss";
+
+.chbi-lifting-card {
+  background: $color-panel;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  overflow: hidden;  
+
+  &__header {
+    padding: 14px 18px;
+    border-bottom: 1px solid $color-border;
+    background: $color-panel-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    font-weight: 700;
+    font-family: $font-display;
+  }
+
+  &__title {
+    font-size: 13px;
+    font-weight: $weight-body-semibold;
+    color: $color-text;
+    font-family: $font-body;
+  }
+
+  &__body {
+    padding: 18px;
+    font-weight: 700;
+    font-family: $font-display;
+  }
+}

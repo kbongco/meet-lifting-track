@@ -27,4 +27,8 @@
   &--danger {
     @include tinted-button($color-bad);
   }
+
+  &--completed {
+    @include tinted-button($color-accent);
+  }
 }
