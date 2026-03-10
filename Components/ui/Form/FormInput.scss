@@ -1,0 +1,31 @@
+@import "../../../app/styles/globals.scss";
+@import "../../../app/styles/variables.scss";
+
+.chbi-lifting-form-input-container {
+  display: flex;
+  flex-direction: column;
+
+  .chbi-lifting-form-label {
+    font-family: $font-body;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4a6070;
+    font-size: 14px;
+  }
+  .chbi-lifting-form-input {
+    background: $color-panel-2;
+    border: 1px solid $color-border-2;
+    border-radius: 6px;
+    padding: 9px 12px;
+    color: $color-text;
+    font-size: 13px;
+    font-family: $font-body;
+     width: 100%;
+
+    // focus state
+    &:focus {
+      border-color: $color-accent;
+      outline: none;
+    }
+  }
+}

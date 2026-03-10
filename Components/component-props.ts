@@ -21,5 +21,24 @@ export interface CardBodyProps {
   children: React.ReactNode;
 }
 
+export interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement>{
+  label: string;
+}
+
+export interface FormTextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label: string;
+}
+
+export interface Options {
+  label: string;
+  value: string;
+}
+
+export interface SelectInputProps extends React.SelectHTMLAttributes<HTMLSelectElement>{
+  options: Options[]
+  placeholder: string;
+  label: string;
+}
+
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
 export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger' | 'completed'
