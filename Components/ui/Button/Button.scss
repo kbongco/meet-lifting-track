@@ -1,0 +1,60 @@
+@import "../../../app/styles/globals.scss";
+
+@mixin tinted-button($color, $bg-opacity: 0.15, $border-opacity: 0.3, $hover-opacity: 0.25) {
+  background: rgba($color, $bg-opacity);
+  border: 1px solid rgba($color, $border-opacity);
+  color: $color;
+
+  &:hover {
+    background: rgba($color, $hover-opacity);
+  }
+}
+
+
+.chbi-lift-button {
+  // base styles
+  padding: 0.85rem 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: $font-body;
+  font-weight: $weight-body-semibold;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: none;
+
+  &--good {
+    @include tinted-button($color-good);
+  }
+
+  &--bad {
+    @include tinted-button($color-bad);
+  }
+
+  &--danger {
+    @include tinted-button($color-bad, 0.10, 0.25, 0.20);
+  }
+
+  &--primary {
+    background: $color-accent;
+    color: $color-bg;
+    border: none;
+
+    &:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+  }
+
+  &--secondary {
+    background: $color-panel-2;
+    color: $color-text-muted;
+    border: 1px solid $color-border-2;
+    text-transform:none;
+
+    &:hover {
+      color: $color-text;
+      border-color: $color-text-muted;
+    }
+  }
+}
