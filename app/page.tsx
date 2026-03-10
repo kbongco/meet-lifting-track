@@ -3,6 +3,7 @@ import "./page.scss";
 import Button from "@/Components/ui/Button/Button";
 import Badge from "@/Components/ui/Badge/Badge";
 import { Card, CardHeader, CardBody } from "@/Components/ui/Card/Card";
+import FormInput from "@/Components/ui/Form/FormInput";
 export default function Home() {
   return (
     <div>
@@ -50,6 +51,8 @@ export default function Home() {
           </CardBody>
         </Card>
       </div>
+
+      <FormInput label={"Test Label"}/>
 
     </div>
   );
