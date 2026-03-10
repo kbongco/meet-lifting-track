@@ -40,5 +40,12 @@ export interface SelectInputProps extends React.SelectHTMLAttributes<HTMLSelectE
   label: string;
 }
 
+export interface ToggleProps {
+  label: string;
+  subLabel?: string;
+  isActive: boolean;
+  onToggle: () => void
+}
+
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
 export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger' | 'completed'

@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import "./page.scss";
 import Button from "@/Components/ui/Button/Button";
@@ -7,11 +8,15 @@ import FormInput from "@/Components/ui/Form/FormInput";
 import FormTextArea from "@/Components/ui/Form/FormTextArea";
 import { Options } from "@/Components/component-props";
 import FormSelect from "@/Components/ui/Form/FormSelect";
+import { useState } from "react";
+import Toggle from "@/Components/ui/Toggle/Toggle";
 export default function Home() {
   const weightUnitOptions: Options[] = [
   { label: 'Kilograms (kg)', value: 'kg' },
   { label: 'Pounds (lbs)', value: 'lbs' },
-]
+  ]
+  
+  const [showWilks, setShowWilks] = useState(true)
 
   return (
     <div>
@@ -67,7 +72,12 @@ export default function Home() {
   options={weightUnitOptions}
   placeholder="Select weight unit..."
 />
-
+<Toggle
+  label="Show Wilks Score on Scoreboard"
+  subLabel="Display Wilks 2 coefficient next to totals"
+  isActive={showWilks}
+  onToggle={() => setShowWilks(!showWilks)}
+/>
     </div>
   );
 }
