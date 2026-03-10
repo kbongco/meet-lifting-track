@@ -5,7 +5,14 @@ import Badge from "@/Components/ui/Badge/Badge";
 import { Card, CardHeader, CardBody } from "@/Components/ui/Card/Card";
 import FormInput from "@/Components/ui/Form/FormInput";
 import FormTextArea from "@/Components/ui/Form/FormTextArea";
+import { Options } from "@/Components/component-props";
+import FormSelect from "@/Components/ui/Form/FormSelect";
 export default function Home() {
+  const weightUnitOptions: Options[] = [
+  { label: 'Kilograms (kg)', value: 'kg' },
+  { label: 'Pounds (lbs)', value: 'lbs' },
+]
+
   return (
     <div>
       <h1 className="test">Test</h1>
@@ -55,6 +62,11 @@ export default function Home() {
 
       <FormInput label={"Test Label"} />
       <FormTextArea label={"Text Area"} />
+      <FormSelect
+  label="Weight Units"
+  options={weightUnitOptions}
+  placeholder="Select weight unit..."
+/>
 
     </div>
   );

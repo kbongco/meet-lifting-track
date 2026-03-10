@@ -29,5 +29,16 @@ export interface FormTextareaProps extends React.TextareaHTMLAttributes<HTMLText
   label: string;
 }
 
+export interface Options {
+  label: string;
+  value: string;
+}
+
+export interface SelectInputProps extends React.SelectHTMLAttributes<HTMLSelectElement>{
+  options: Options[]
+  placeholder: string;
+  label: string;
+}
+
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
 export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger' | 'completed'
