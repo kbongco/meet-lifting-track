@@ -23,7 +23,10 @@ export interface CardBodyProps {
 
 export interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement>{
   label: string;
-  
+}
+
+export interface FormTextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label: string;
 }
 
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"

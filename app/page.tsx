@@ -4,6 +4,7 @@ import Button from "@/Components/ui/Button/Button";
 import Badge from "@/Components/ui/Badge/Badge";
 import { Card, CardHeader, CardBody } from "@/Components/ui/Card/Card";
 import FormInput from "@/Components/ui/Form/FormInput";
+import FormTextArea from "@/Components/ui/Form/FormTextArea";
 export default function Home() {
   return (
     <div>
@@ -52,7 +53,8 @@ export default function Home() {
         </Card>
       </div>
 
-      <FormInput label={"Test Label"}/>
+      <FormInput label={"Test Label"} />
+      <FormTextArea label={"Text Area"} />
 
     </div>
   );
