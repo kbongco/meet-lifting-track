@@ -11,6 +11,7 @@ import FormSelect from "@/Components/ui/Form/FormSelect";
 import { useState } from "react";
 import Toggle from "@/Components/ui/Toggle/Toggle";
 import NavTabs from "@/Components/layout/NavTabs/Navtabs";
+import Header from "@/Components/layout/Header/Header";
 export default function Home() {
   const weightUnitOptions: Options[] = [
   { label: 'Kilograms (kg)', value: 'kg' },
@@ -21,7 +22,8 @@ export default function Home() {
 
   return (
     <div>
-      <NavTabs/>
+      <Header/>
+      {/* <NavTabs/> */}
       {/* <h1 className="test">Test</h1>
       <Button buttonStyle={"good"}>Good Lift</Button>
       <Button buttonStyle={"bad"}>No Lift</Button>
