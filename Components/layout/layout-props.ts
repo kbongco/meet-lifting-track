@@ -4,7 +4,14 @@ export interface NavTabsProps {
 }
 
 export interface AppShellProps {
-  children: React.ReactNode;
+  activeTab: Tab
+    onChange: (tab: Tab) => void
+  children?: React.ReactNode;
 }
 
-type Tab = 'scoreboard' | 'results' | 'schedule' | 'admin'
+export interface HeaderProps {
+  activeTab: Tab
+  onChange: (tab: Tab) => void
+}
+
+export type Tab = 'scoreboard' | 'results' | 'schedule' | 'admin'

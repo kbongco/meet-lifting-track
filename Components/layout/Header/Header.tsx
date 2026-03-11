@@ -1,8 +1,9 @@
 import Badge from "@/Components/ui/Badge/Badge";
 import NavTabs from "../NavTabs/Navtabs";
 import './Header.scss';
+import { HeaderProps } from "../layout-props";
 
-export default function Header() {
+export default function Header({activeTab, onChange}: HeaderProps ) {
   return (
     <>
       <div className='chbi-lifting-header-container'>
@@ -18,7 +19,7 @@ export default function Header() {
         <div className='chbi-lifting-header-badge-container'>
           <Badge badgeType="success">Live</Badge>
         </div>
-        <NavTabs />
+        <NavTabs activeTab={activeTab} onChange={onChange} />
       </div>
     </>
   );

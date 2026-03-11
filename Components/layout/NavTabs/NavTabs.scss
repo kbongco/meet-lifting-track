@@ -7,7 +7,7 @@
   border: 1px solid $color-border;
   border-radius: 6px;
   padding: 3px;
-  display: inline-flex; // ← inline-flex so it sizes to content
+  display: inline-flex; 
 }
 
 .chbi-nav-tab-list {
@@ -28,9 +28,9 @@
   transition: all 0.15s ease;
   font-family: $font-body;
 
-  &:hover {
-    color: $color-text;
-  }
+  // &:hover {
+  //   color: $color-text;
+  // }
 
   &--active {
     background: $color-border-2;
