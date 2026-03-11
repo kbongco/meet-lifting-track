@@ -1,0 +1,11 @@
+.chbi-lifting-app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  .chbi-lifting-app-shell-container{
+    flex: 1;
+    overflow-y: auto;
+  }
+}

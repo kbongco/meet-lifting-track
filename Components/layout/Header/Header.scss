@@ -5,6 +5,8 @@
   display: flex;
   gap: 1rem;
   justify-content: space-around;
+   border-bottom: 1px solid $color-border;
+   flex-shrink: 0;
 
   .chbi-lifting-app-name{
     display: flex;

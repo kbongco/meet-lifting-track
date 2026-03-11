@@ -8,6 +8,8 @@
   color: $color-text-muted;
   padding-left: 8px;
   padding-right: 8px;
+  border-top: 1px solid $color-border;
+  flex-shrink: 0;
 
   .chbi-lifting-status-left {
     display: flex;
