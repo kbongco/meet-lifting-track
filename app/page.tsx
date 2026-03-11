@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <>
-      <AppShell activeTab={activeTab} onTabChange={setActiveTab}>
+      <AppShell activeTab={activeTab} onChange={setActiveTab}>
         <div style={{ padding: '20px', color: 'white' }}>
           current tab: {activeTab}
           </div>
