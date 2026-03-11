@@ -13,6 +13,7 @@ import Toggle from "@/Components/ui/Toggle/Toggle";
 import NavTabs from "@/Components/layout/NavTabs/Navtabs";
 import Header from "@/Components/layout/Header/Header";
 import StatusBar from "@/Components/layout/StatusBar/StatusBar";
+import AppShell from "@/Components/AppShell/AppShell";
 export default function Home() {
   const weightUnitOptions: Options[] = [
   { label: 'Kilograms (kg)', value: 'kg' },
@@ -22,8 +23,11 @@ export default function Home() {
   const [showWilks, setShowWilks] = useState(true)
 
   return (
-    <div>
-      <Header/>
+    <>
+      <AppShell>
+        
+      </AppShell>
+      {/* <Header/> */}
       {/* <NavTabs/> */}
       {/* <h1 className="test">Test</h1>
       <Button buttonStyle={"good"}>Good Lift</Button>
@@ -83,7 +87,7 @@ export default function Home() {
   isActive={showWilks}
   onToggle={() => setShowWilks(!showWilks)}
 /> */}
-      <StatusBar/>
-    </div>
+      {/* <StatusBar/> */}
+    </>
   );
 }
