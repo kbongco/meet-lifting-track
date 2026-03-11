@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import "./page.scss";
 import AppShell from "@/Components/AppShell/AppShell";
 import { useState } from 'react';
@@ -16,7 +15,6 @@ export default function Home() {
           current tab: {activeTab}
           </div>
       </AppShell>
-
     </>
   );
 }
