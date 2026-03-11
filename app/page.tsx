@@ -12,6 +12,7 @@ import { useState } from "react";
 import Toggle from "@/Components/ui/Toggle/Toggle";
 import NavTabs from "@/Components/layout/NavTabs/Navtabs";
 import Header from "@/Components/layout/Header/Header";
+import StatusBar from "@/Components/layout/StatusBar/StatusBar";
 export default function Home() {
   const weightUnitOptions: Options[] = [
   { label: 'Kilograms (kg)', value: 'kg' },
@@ -82,6 +83,7 @@ export default function Home() {
   isActive={showWilks}
   onToggle={() => setShowWilks(!showWilks)}
 /> */}
+      <StatusBar/>
     </div>
   );
 }
