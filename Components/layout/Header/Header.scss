@@ -1,0 +1,44 @@
+@import "../../../app/styles/globals.scss";
+@import "../../../app/styles/variables.scss";
+
+.chbi-lifting-header-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+
+  .chbi-lifting-app-name {
+    display: flex;
+    align-items: center;
+  }
+
+  .chbi-lifting-logo {
+    font-size: 1.5rem;
+    color: $color-accent;
+    font-family: $font-body;
+    text-transform: uppercase;
+  }
+
+  .chbi-lifting-meet-container {
+    display: flex;
+    align-items: center;
+    .chbi-lifting-meet-name {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-family: $font-body;
+    }
+    .chbi-lifting-sub-header-name {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      font-size: 12px;
+      text-align: center;
+      color: $color-text-muted;
+    }
+  }
+
+  .chbi-lifting-header-badge-container {
+    display: flex;
+    align-items: center;
+  }
+}
