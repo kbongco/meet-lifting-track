@@ -10,6 +10,10 @@ import { Options } from "@/Components/component-props";
 import FormSelect from "@/Components/ui/Form/FormSelect";
 import { useState } from "react";
 import Toggle from "@/Components/ui/Toggle/Toggle";
+import NavTabs from "@/Components/layout/NavTabs/Navtabs";
+import Header from "@/Components/layout/Header/Header";
+import StatusBar from "@/Components/layout/StatusBar/StatusBar";
+import AppShell from "@/Components/AppShell/AppShell";
 export default function Home() {
   const weightUnitOptions: Options[] = [
   { label: 'Kilograms (kg)', value: 'kg' },
@@ -19,8 +23,13 @@ export default function Home() {
   const [showWilks, setShowWilks] = useState(true)
 
   return (
-    <div>
-      <h1 className="test">Test</h1>
+    <>
+      <AppShell>
+        
+      </AppShell>
+      {/* <Header/> */}
+      {/* <NavTabs/> */}
+      {/* <h1 className="test">Test</h1>
       <Button buttonStyle={"good"}>Good Lift</Button>
       <Button buttonStyle={"bad"}>No Lift</Button>
       <Button buttonStyle={"primary"}>Primary</Button>
@@ -77,7 +86,8 @@ export default function Home() {
   subLabel="Display Wilks 2 coefficient next to totals"
   isActive={showWilks}
   onToggle={() => setShowWilks(!showWilks)}
-/>
-    </div>
+/> */}
+      {/* <StatusBar/> */}
+    </>
   );
 }

@@ -1,0 +1,23 @@
+@import "../../../app/styles/globals.scss";
+@import "../../../app/styles/variables.scss";
+
+.chbi-lifting-status-bar-container {
+  font-size: 10px;
+  display: flex;
+  justify-content:space-between;
+  color: $color-text-muted;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-top: 1px solid $color-border;
+  flex-shrink: 0;
+
+  .chbi-lifting-status-left {
+    display: flex;
+    gap:1.5rem
+  }
+
+  .chbi-lifting-status-right{ 
+    display: flex;
+    gap:1rem
+  }
+}
