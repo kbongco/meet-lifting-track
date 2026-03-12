@@ -37,7 +37,7 @@ export interface Options {
 export interface SelectInputProps extends React.SelectHTMLAttributes<HTMLSelectElement>{
   options: Options[]
   placeholder: string;
-  label: string;
+  label?: string;
 }
 
 export interface ToggleProps {
