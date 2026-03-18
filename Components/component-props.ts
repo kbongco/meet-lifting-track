@@ -1,3 +1,5 @@
+import { Attempt, Lifter } from "@/types";
+
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   buttonStyle: ButtonStyle;
@@ -45,6 +47,18 @@ export interface ToggleProps {
   subLabel?: string;
   isActive: boolean;
   onToggle: () => void
+}
+
+export interface ResultsTableRowProps {
+  lifter: Lifter
+  attempts: Attempt[]
+  place: number;
+  total: number | null;
+}
+
+export interface TableBodyProps {
+  lifterInfo: Lifter[];
+  attempts: Attempt[];
 }
 
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"

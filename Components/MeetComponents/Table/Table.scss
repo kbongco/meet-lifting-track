@@ -1,0 +1,145 @@
+@import '../../../app/styles/globals.scss';
+@import '../../../app/styles/variables.scss';
+
+.chbi-lifting-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $font-body;
+  font-size: 13px;
+
+  // ─── HEADER ───────────────────────────────
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  // group header row — Squat / Bench / Deadlift
+  .chbi-results-table__group-row th {
+    background: $color-panel;
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: $weight-body-semibold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    border-bottom: 1px solid $color-border;
+    text-align: center;
+
+    &.group-squat { color: $color-accent; }
+    &.group-bench { color: $color-warn; }
+    &.group-deadlift { color: $color-good; }
+  }
+
+  // column header row — 1 / 2 / 3 / Total etc
+  .chbi-results-table__col-row th {
+    background: $color-panel-2;
+    padding: 7px 8px;
+    font-size: 10px;
+    font-weight: $weight-body-semibold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    border-bottom: 1px solid $color-border;
+    text-align: center;
+    white-space: nowrap;
+
+    &.col-left { text-align: left; }
+  }
+
+  // ─── BODY ─────────────────────────────────
+  tbody tr {
+    border-bottom: 1px solid $color-border;
+    transition: background 0.1s ease;
+
+    &:hover {
+      background: rgba($color-accent, 0.03);
+    }
+  }
+
+  tbody td {
+    padding: 9px 8px;
+    text-align: center;
+    color: $color-text;
+    vertical-align: middle;
+  }
+
+  .col-left { text-align: left; }
+  .col-mono { font-family: $font-mono; font-size: 12px; }
+  .col-muted { color: $color-text-muted; }
+
+  // place column
+  .col-place {
+    font-family: $font-mono;
+    font-weight: $weight-mono-semibold;
+    font-size: 13px;
+    color: $color-text-muted;
+    width: 36px;
+
+    &.place-1 { color: $color-gold; }
+    &.place-2 { color: #c0c0c0; }
+    &.place-3 { color: #cd7f32; }
+  }
+
+  // total + wilks columns
+  .col-total {
+    font-family: $font-mono;
+    font-weight: $weight-mono-semibold;
+    font-size: 13px;
+    color: $color-text;
+  }
+
+  .col-wilks {
+    font-family: $font-mono;
+    font-size: 12px;
+    color: $color-accent;
+  }
+
+  // ─── DIVISION HEADER ──────────────────────
+  .chbi-results-division-header td {
+    background: $color-panel-2;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: $weight-body-semibold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    border-top: 2px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    text-align: left;
+  }
+}
+
+// ─── ATTEMPT CELL ───────────────────────────
+.chbi-attempt-cell {
+  font-family: $font-mono;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  min-width: 44px;
+  text-align: center;
+
+  &--good {
+    background: rgba($color-good, 0.1);
+    color: $color-good;
+  }
+
+  &--no-lift {
+    background: rgba($color-bad, 0.08);
+    color: $color-bad;
+    text-decoration: line-through;
+  }
+
+  &--pending {
+    color: $color-text-muted;
+  }
+
+  &--empty {
+    // color: $color-muted-2;
+
+    &::after {
+      content: '—';
+    }
+  }
+}
