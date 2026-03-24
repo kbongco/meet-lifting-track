@@ -3,6 +3,7 @@ import "./page.scss";
 import AppShell from "@/Components/AppShell/AppShell";
 import { useState } from 'react';
 import { Tab } from "@/Components/layout/layout-props";
+import MeetView from "./meets/page";
 export default function Home() {
 
   const [activeTab, setActiveTab] = useState<Tab>('scoreboard');
@@ -11,9 +12,10 @@ export default function Home() {
   return (
     <>
       <AppShell activeTab={activeTab} onChange={setActiveTab}>
-        <div style={{ padding: '20px', color: 'white' }}>
+        {/* <div style={{ padding: '20px', color: 'white' }}>
           current tab: {activeTab}
-          </div>
+        </div> */}
+                  <MeetView/>
       </AppShell>
     </>
   );

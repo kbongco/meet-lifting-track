@@ -1,0 +1,23 @@
+.chbi-meet-header-container {
+  display: flex;
+  justify-content: space-between;
+
+  .chbi-meet-header-all-buttons {
+    display: flex;
+
+    .chbi-meet-header-dropdown-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .chbi-meet-header-button-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  .chbi-meet-header-text {
+    text-transform: uppercase;
+  }
+}
