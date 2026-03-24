@@ -1,11 +1,14 @@
 import { Lifter, Attempt, LiftType, AttemptStatus } from '@/types'
 
+import { Lifter, Attempt } from '@/types'
+
 export const mockLifters: Lifter[] = [
   {
     id: '1',
     meetId: 'meet-1',
     flightId: 'flight-1',
     name: 'John Smith',
+    sex: 'M',
     lotNumber: 14,
     bodyweight: 92.4,
     weightClass: '93',
@@ -17,6 +20,7 @@ export const mockLifters: Lifter[] = [
     meetId: 'meet-1',
     flightId: 'flight-1',
     name: 'Tom Jones',
+    sex: 'M',
     lotNumber: 7,
     bodyweight: 91.1,
     weightClass: '93',
@@ -28,6 +32,7 @@ export const mockLifters: Lifter[] = [
     meetId: 'meet-1',
     flightId: 'flight-1',
     name: 'Marcus Webb',
+    sex: 'M',
     lotNumber: 22,
     bodyweight: 92.8,
     weightClass: '93',
@@ -39,6 +44,7 @@ export const mockLifters: Lifter[] = [
     meetId: 'meet-1',
     flightId: 'flight-2',
     name: 'Sarah Chen',
+    sex: 'F',
     lotNumber: 3,
     bodyweight: 62.8,
     weightClass: '63',
@@ -50,6 +56,7 @@ export const mockLifters: Lifter[] = [
     meetId: 'meet-1',
     flightId: 'flight-2',
     name: 'Lisa Park',
+    sex: 'F',
     lotNumber: 9,
     bodyweight: 61.4,
     weightClass: '63',
