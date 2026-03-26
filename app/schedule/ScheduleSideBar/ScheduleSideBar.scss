@@ -1,0 +1,15 @@
+@import '../../styles/globals.scss';
+@import '../../styles/variables.scss';
+.chbi-lifting-sidebar {
+  .chbi-lifting-sidebar-header {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .chbi-lifting-sidebar-subtext {
+    font-size: 0.75rem;
+    color: $color-text-muted;
+    margin-top: 0;
+  }
+}

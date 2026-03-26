@@ -1,13 +1,23 @@
-.chbi-lifting-app-shell {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-  padding-left: 8px;
-  padding-right: 8px;
+// @import "../../../app/styles/globals.scss";
+// @import "../../../app/styles/variables.scss";
 
-  .chbi-lifting-app-shell-container{
+@import '../../app/styles/globals.scss';
+@import '../../app/styles/variables.scss';
+.chbi-lifting-schedule {
+  display: flex;
+  height: 100%;        // ← fill the app shell container
+  overflow: hidden;    // ← prevent outer scroll
+
+  .chbi-lifting-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    overflow-y: auto;  // ← sidebar scrolls independently
+    border-right: 1px solid $color-border;
+  }
+
+  .chbi-lifting-schedule-content {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: auto;  // ← content scrolls independently
+    padding: 20px;
   }
 }
