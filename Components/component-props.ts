@@ -61,5 +61,13 @@ export interface TableBodyProps {
   attempts: Attempt[];
 }
 
+export interface ScheduleCardProps{
+  sessionNumber: string;
+  scheduleDate: string;
+  weightDivision: string;
+  totalLifters: string;
+  totalPlatforms: string;
+}
+
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
 export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger' | 'completed'
