@@ -1,4 +1,4 @@
-export type SessionStatus = 'live' | 'ended' | 'standby';
+export type SessionStatus = 'live' | 'completed' | 'standby' | 'upcoming';
 export type WeightUnit = 'kg' | 'lbs';
 export type Formula = 'DOTS' | 'Wilks' | 'GLP';
 
@@ -18,11 +18,20 @@ export interface MeetInformation {
 }
 
 export interface Session {
+  id: string
+  meetId?: string
+  name: string
+  startTime: string
+  status: SessionStatus
+  platformIds: string[]
+  lifterCount?: number    
+  estimatedEnd?: string     
+  completedLifts?: number   
+  totalLifts?: number       
+}
+
+export interface Flights {
   id: string;
-  meetId: string;
+  sessionId: string;
   name: string;
-  startTime: string;
-  status: string;
-  platFormId: string[];
-  primeTime?: boolean;
 }
