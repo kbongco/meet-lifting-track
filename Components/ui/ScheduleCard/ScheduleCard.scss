@@ -1,0 +1,24 @@
+@import '../../../app/styles/globals.scss';
+@import '../../../app/styles/variables.scss';
+
+.chbi-lifting-schedule-card-container {
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 8px;
+  .chbi-lifting-schedule-header {
+    font-size: 1.3rem;
+  }
+
+  .chbi-lifting-schedule-info {
+      color: $color-text-muted;
+      font-size: 0.75rem;
+      margin-top: 0;
+
+      .chbi-lifting-info {
+        margin-bottom: 2px;
+        margin-top: 2px;
+      }
+  }
+}
