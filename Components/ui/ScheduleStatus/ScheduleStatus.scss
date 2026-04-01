@@ -1,0 +1,20 @@
+@import "../../../app/styles/globals.scss";
+@import "../../../app/styles/variables.scss";
+
+.chbi-lifting-schedule-status {
+  display: flex;
+  align-items: center;
+  border: 3px $color-border solid;
+  border-radius: 15%;
+  height: 70%;
+  padding: 3px;
+  background-color: $color-accent;
+  .chbi-lifting-schedule-text {
+    font-size: 9px;
+    font-weight: $weight-body-semibold; // 600
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+}
