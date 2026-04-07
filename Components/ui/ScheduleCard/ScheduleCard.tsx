@@ -7,14 +7,14 @@ export default function ScheduleCards({sessionNumber, scheduleDate, weightDivisi
   return (
     <div className='chbi-lifting-schedule-card-container'>
       <div className='chbi-lifting-schedule-header-container'>
-        <h1 className='chbi-lifting-schedule-header '>{sessionNumber}</h1>
+        <h1 className='chbi-lifting-schedule-header '>{sessionNumber.split('—')[0].trim()}</h1>
         <Badge
           children={status}
         badgeType='success'/>
         </div>
       <div className='chbi-lifting-schedule-info'>
         <p className='chbi-lifting-info'>{scheduleDate}</p>
-        <p className='chbi-lifting-info'>{weightDivision}</p>
+        <p className='chbi-lifting-info'>{weightDivision.replace(/^Session \d+\s*—\s*/, '')}</p>
         <p className='chbi-lifting-info'>{totalLifters} lifters · {totalPlatforms} platforms</p>
       </div>
       <ScheduleProgress/>
