@@ -16,6 +16,7 @@ export default function ScheduleSideBar() {
           weightDivision={mock.name}
           totalLifters={mock.lifterCount}
           totalPlatforms={mock.platformIds.length}
+          status={mock.status}
         />
       ))}
     </div>

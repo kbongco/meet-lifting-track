@@ -67,6 +67,7 @@ export interface ScheduleCardProps{
   weightDivision: string;
   totalLifters?: string | number;
   totalPlatforms: string | number;
+  status?: string;
 }
 
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"

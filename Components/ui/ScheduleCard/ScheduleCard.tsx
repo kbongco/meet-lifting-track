@@ -3,14 +3,14 @@ import Badge from '../Badge/Badge';
 import ScheduleProgress from '../ScheduleProgress/ScheduleProgress';
 import './ScheduleCard.scss';
 
-export default function ScheduleCards({sessionNumber, scheduleDate, weightDivision, totalLifters, totalPlatforms}:ScheduleCardProps) {
+export default function ScheduleCards({sessionNumber, scheduleDate, weightDivision, totalLifters, totalPlatforms, status}:ScheduleCardProps) {
   return (
     <div className='chbi-lifting-schedule-card-container'>
       <div className='chbi-lifting-schedule-header-container'>
         <h1 className='chbi-lifting-schedule-header '>{sessionNumber}</h1>
-        {/* <ScheduleStatus /> */}
         <Badge
-        children='done'/>
+          children={status}
+        badgeType='success'/>
         </div>
       <div className='chbi-lifting-schedule-info'>
         <p className='chbi-lifting-info'>{scheduleDate}</p>
