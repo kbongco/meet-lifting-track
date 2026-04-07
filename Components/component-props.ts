@@ -65,8 +65,8 @@ export interface ScheduleCardProps{
   sessionNumber: string;
   scheduleDate: string;
   weightDivision: string;
-  totalLifters: string;
-  totalPlatforms: string;
+  totalLifters?: string | number;
+  totalPlatforms: string | number;
 }
 
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
