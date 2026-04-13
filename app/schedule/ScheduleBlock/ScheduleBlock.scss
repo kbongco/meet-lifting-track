@@ -1,12 +1,21 @@
 @import url("../../styles/globals.scss");
 @import url("../../styles/variables.scss");
-.chbi-lifting-circle-time {
+.chbi-lifting-schedule-info {
+  .chbi-lifting-circle-time {
   display: flex;
-  gap: 8px;
+  gap: 16px;
 
   .chbi-lifting-circle-div {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+
+    .chbi-lifting-vert-line {
+      transform: rotate(90deg);
+      width: 35px;
+    }
   }
   .chbi-lifting-circle-status {
     display: block;
@@ -15,4 +24,10 @@
     background-color: #00d4ff;
     border-radius: 50%;
   }
+
+  .chbi-lifting-schedule-info-container {
+    border: 1px solid #1e2a35;
+    width: 100%;
+  }
+}
 }
