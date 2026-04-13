@@ -10,7 +10,6 @@ export default function ScheduleView() {
       <div className='chbi-lifting-schedule-content'>
         <ScheduleContent/>
       </div>
-      {/* <h1>This is the schedule view</h1> */}
     </div>
 )
 }

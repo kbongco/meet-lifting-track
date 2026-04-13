@@ -2,32 +2,70 @@
 @import url("../../styles/variables.scss");
 .chbi-lifting-schedule-info {
   .chbi-lifting-circle-time {
-  display: flex;
-  gap: 16px;
-
-  .chbi-lifting-circle-div {
-    align-items: center;
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    gap: 16px;
+    align-items: center;
 
+    .chbi-lifting-circle-div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
 
-    .chbi-lifting-vert-line {
-      transform: rotate(90deg);
-      width: 35px;
+      .chbi-lifting-vert-line {
+        transform: rotate(90deg);
+        width: 35px;
+      }
+    }
+    .chbi-lifting-circle-status {
+      display: block;
+      height: 10px;
+      width: 10px;
+      background-color: #00d4ff;
+      border-radius: 50%;
+    }
+
+    .chbi-lifting-schedule-info-container {
+      border: 1px solid #1e2a35;
+      width: 100%;
+      border-radius: 10px;
+      padding: 16px;
+
+      .chbi-lifting-schedule-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .chbi-lifting-title {
+          font-size: 16px;
+        }
+      }
+
+      .chbi-lifting-schedule-athletes {
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+
+      .chbi-lifting-schedule-info-text-container {
+        display: flex;
+        gap: 16px;
+
+        .chbi-lifting-schedule-extra-text {
+          display: flex;
+
+          .chbi-lifting-schedule-athletes {
+            color: #4a6070;
+          }
+
+          .chbi-lifting-secondary-text {
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 0;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
-  .chbi-lifting-circle-status {
-    display: block;
-    height: 10px;
-    width: 10px;
-    background-color: #00d4ff;
-    border-radius: 50%;
-  }
-
-  .chbi-lifting-schedule-info-container {
-    border: 1px solid #1e2a35;
-    width: 100%;
-  }
-}
 }
