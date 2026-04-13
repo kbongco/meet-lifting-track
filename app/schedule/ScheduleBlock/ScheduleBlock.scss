@@ -66,6 +66,14 @@
           }
         }
       }
+
+      .chbi-lifting-info-flight-information {
+        .chbi-lifting-info-badges {
+          margin-top: 8px;
+          display: flex;
+          gap: 16px;
+        }
+      }
     }
   }
 }

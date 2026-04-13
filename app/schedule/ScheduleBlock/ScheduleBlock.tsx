@@ -24,6 +24,12 @@ export default function ScheduleBlock() {
               <p className="chbi-lifting-secondary-text">&nbsp;Hall B </p>
             </div>
           </div>
+          <div className='chbi-lifting-info-flight-information'>
+            <div className='chbi-lifting-info-badges'>
+              <Badge children={'Platform 1 Flight A 14 Lifters Sq R3'} badgeType="success" />
+                          <Badge children={'Platform 2 Flight B Bp R2'} badgeType="success" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
