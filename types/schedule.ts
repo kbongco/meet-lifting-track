@@ -1,24 +1,28 @@
-export type TimelineStatus = 'done' | 'live' | 'upcoming';
+// types/schedule.ts
+export type TimelineBlockStatus = 'done' | 'live' | 'upcoming'
+export type FlightStatus = 'done' | 'live' | 'upcoming'
 
-export interface TimelineFlight {
+export interface TimelineFlightTag {
   id: string
-  name: string
-  lifterCount: number
-  status: TimelineStatus
+  platformName?: string
+  flightName: string
+  lifterCount?: number
+  currentLift?: string    
+  status: FlightStatus
 }
 
-export interface TimeLineInformation {
-  id: string;
-  sessionId: string;
-  time: string;
-  status: TimelineStatus;
-  title: string;
-  division: string;
-  platform: string;
-  lifterCount: number;
-  flightCount: number
-  estimatedEnd: string;
-  flights: TimelineFlight[];
-  completedLifts: number;
-  totalLifts: number;
+export interface TimelineBlock {
+  id: string
+  time: string
+  status: TimelineBlockStatus
+  title: string
+  divisions?: string        
+  lifterCount?: number
+  platformCount?: number
+  room?: string             
+  duration?: string         
+  actualDuration?: string   
+  estimatedEnd?: string    
+  progress?: number         
+  flights: TimelineFlightTag[]
 }
