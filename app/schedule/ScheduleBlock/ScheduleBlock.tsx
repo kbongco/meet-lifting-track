@@ -18,6 +18,20 @@ export default function ScheduleBlock({
   flights,
 }: TimelineBlock) {
   console.log(actualDuration, "act");
+  console.log(status,'stat')
+
+  function specifyBadgeType(status:string) {
+    switch (status) {
+      case "done":
+        return "success"
+      case "live":
+        return "completed"
+      case "upcoming":
+        return "neutral"
+      default:
+        return "neutral"
+    }
+  }
   return (
     <div className="chbi-lifting-schedule-info">
       <div className="chbi-lifting-circle-time">
@@ -29,16 +43,42 @@ export default function ScheduleBlock({
         <div className="chbi-lifting-schedule-info-container">
           <div className="chbi-lifting-schedule-title">
             <h1 className="chbi-lifting-title">{title}</h1>
-            <Badge children={status} badgeType="success" />
+            <Badge children={status} badgeType={specifyBadgeType(status)} />
           </div>
           <div className="chbi-lifting-schedule-info-text-container">
             <p className="chbi-lifting-schedule-athletes">{divisions}</p>
             <div className="chbi-lifting-schedule-extra-text">
               <p className="chbi-lifting-schedule-athletes"></p>
+              {lifterCount ? (
+                <>
+                  {" "}
+                  <p className="chbi-lifting-schedule-athletes">
+                    Lifter Count:{" "}
+                  </p>
+                  <p className="chbi-lifting-secondary-text">
+                    &nbsp;{lifterCount} {" "}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+              {platformCount ? (
+                <>
+                  {" "}
+                  <p className="chbi-lifting-schedule-athletes">
+                    Platform Count:{" "}
+                  </p>
+                  <p className="chbi-lifting-secondary-text">
+                    &nbsp;{platformCount}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
               {duration ? (
                 <>
                   {" "}
-                  <p className="chbi-lifting-schedule-athletes">Duration: </p>
+                  <p className="chbi-lifting-schedule-athletes">Duration: {" "}</p>
                   <p className="chbi-lifting-secondary-text">
                     &nbsp;{duration}
                   </p>
