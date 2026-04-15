@@ -16,3 +16,28 @@ h1, h2, h3, .display-text {
 code, .mono {
   font-family: $font-mono;
 }
+
+// put this in your globals.scss
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-border-2 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $color-border-2;
+  border-radius: 3px;
+
+  &:hover {
+    background: $color-text-muted;
+  }
+}
