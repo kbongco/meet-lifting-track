@@ -61,5 +61,26 @@ export interface TableBodyProps {
   attempts: Attempt[];
 }
 
+export interface ScheduleCardProps{
+  sessionNumber: string;
+  scheduleDate: string;
+  weightDivision: string;
+  totalLifters?: string | number;
+  totalPlatforms: string | number;
+  status?: string;
+}
+
+export interface ScheduleBockProps {
+  id: string;
+  time: string;
+  status: string;
+  title: string;
+  divisions: string;
+  platform: string;
+  lifterCount: number;
+  flightCount: number;
+  estimatedEnd: string;
+}
+
 export type ButtonStyle = "primary" | "secondary" | "good" | "bad" | "danger"
 export type BadgeType = 'success' | 'warning' | 'neutral' | 'danger' | 'completed'

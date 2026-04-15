@@ -1,6 +1,8 @@
-import { Lifter, Attempt, LiftType, AttemptStatus } from '@/types'
+// import { Lifter, Attempt, LiftType, AttemptStatus } from '@/types'
 
 import { Lifter, Attempt } from '@/types'
+import { Session, Flights } from '@/types'
+import { TimelineBlock } from '@/types/schedule'
 
 export const mockLifters: Lifter[] = [
   {
@@ -130,4 +132,158 @@ export const mockAttempts: Attempt[] = [
   { id: 'a43', lifterId: '5', liftType: 'deadlift',  roundNumber: 1, weight: 167.5, status: 'good' },
   { id: 'a44', lifterId: '5', liftType: 'deadlift',  roundNumber: 2, weight: 177.5, status: 'good' },
   { id: 'a45', lifterId: '5', liftType: 'deadlift',  roundNumber: 3, weight: 185,   status: 'pending' },
+]
+
+
+
+export const mockSessions: Session[] = [
+{
+  id: 'session-1',
+  name: 'Session 1 — M74 M83 F63 Open Raw',
+  startTime: '2026-02-23T09:00:00',
+  status: 'completed',
+  platformIds: ['platform-1'],
+  lifterCount: 18,
+  estimatedEnd: '2026-02-23T12:00:00',
+  completedLifts: 54,
+  totalLifts: 54,
+},
+{
+  id: 'session-2',
+  name: 'Session 2 — M93 M105 F76 Open Raw',
+  startTime: '2026-02-23T13:00:00',
+  status: 'live',
+  platformIds: ['platform-1', 'platform-2'],
+  lifterCount: 22,
+  estimatedEnd: '2026-02-23T17:45:00',
+  completedLifts: 34,
+  totalLifts: 66,
+},
+{
+  id: 'session-3',
+  name: 'Session 3 — M120 M120+ F84 F84+ Open Raw',
+  startTime: '2026-02-23T17:00:00',
+  status: 'upcoming',
+  platformIds: ['platform-1', 'platform-2'],
+  lifterCount: 20,
+  estimatedEnd: '2026-02-23T21:00:00',
+  completedLifts: 0,
+  totalLifts: 60,
+},
+{
+  id: 'session-4',
+  name: 'Session 4 — All Classes Submaster Raw',
+  startTime: '2026-02-24T09:00:00',
+  status: 'upcoming',
+  platformIds: ['platform-1'],
+  lifterCount: 16,
+  estimatedEnd: '2026-02-24T12:30:00',
+  completedLifts: 0,
+  totalLifts: 48,
+},
+{
+  id: 'session-5',
+  name: 'Session 5 — All Classes Masters Raw',
+  startTime: '2026-02-24T13:00:00',
+  status: 'upcoming',
+  platformIds: ['platform-1'],
+  lifterCount: 14,
+  estimatedEnd: '2026-02-24T16:30:00',
+  completedLifts: 0,
+  totalLifts: 42,
+}
+]
+
+export const mockFlights: Flights[] = [
+  { id: 'flight-1', sessionId: 'session-1', name: 'Flight A' },
+  { id: 'flight-2', sessionId: 'session-1', name: 'Flight B' },
+  { id: 'flight-3', sessionId: 'session-2', name: 'Flight A' },
+  { id: 'flight-4', sessionId: 'session-2', name: 'Flight B' },
+  { id: 'flight-5', sessionId: 'session-2', name: 'Flight C' },
+  { id: 'flight-6', sessionId: 'session-3', name: 'Flight A' },
+  { id: 'flight-7', sessionId: 'session-3', name: 'Flight B' },
+  { id: 'flight-8', sessionId: 'session-4', name: 'Flight A' },
+  { id: 'flight-9', sessionId: 'session-5', name: 'Flight A' },
+]
+
+export const mockTimelineBlocks: TimelineBlock[] = [
+  {
+    id: 'block-1',
+    time: '7:00 AM',
+    status: 'done',
+    title: 'Weigh-Ins & Equipment Check',
+    room: 'Hall B',
+    duration: '2 hrs',
+    flights: [],
+  },
+  {
+    id: 'block-2',
+    time: '8:00 AM',
+    status: 'done',
+    title: 'Session 1',
+    divisions: 'F63 · M74 · Open Raw',
+    lifterCount: 28,
+    platformCount: 2,
+    duration: '3.5 hrs',
+    actualDuration: '3h 22m',
+    flights: [
+      {
+        id: 'ftag-1',
+        flightName: 'Flight A',
+        lifterCount: 14,
+        status: 'done',
+      },
+      {
+        id: 'ftag-2',
+        flightName: 'Flight B',
+        lifterCount: 14,
+        status: 'done',
+      },
+    ],
+  },
+  {
+    id: 'block-3',
+    time: '1:00 PM',
+    status: 'live',
+    title: 'Session 2',
+    divisions: 'M93 · F84 · Open Raw',
+    lifterCount: 22,
+    platformCount: 2,
+    estimatedEnd: '~5:45 PM',
+    progress: 62,
+    flights: [
+      {
+        id: 'ftag-3',
+        platformName: 'Platform 1',
+        flightName: 'Flight A',
+        currentLift: 'SQ R3',
+        status: 'live',
+      },
+      {
+        id: 'ftag-4',
+        platformName: 'Platform 2',
+        flightName: 'Flight B',
+        currentLift: 'BP R2',
+        status: 'done',
+      },
+    ],
+  },
+  {
+    id: 'block-4',
+    time: '6:30 PM',
+    status: 'upcoming',
+    title: 'Session 3',
+    divisions: 'M120 · F84+ · Open Raw',
+    lifterCount: 18,
+    platformCount: 1,
+    duration: '2.5 hrs',
+    flights: [
+      {
+        id: 'ftag-5',
+        flightName: 'Flight A',
+        lifterCount: 10,
+        status: 'upcoming',
+      },
+    ],
+  },
 ]
