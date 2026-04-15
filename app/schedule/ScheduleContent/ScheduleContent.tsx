@@ -23,7 +23,6 @@ export default function ScheduleContent() {
           flights={mock.flights}
         />
       ))}
-      {/* <ScheduleBlock/> */}
     </>
   )
 }

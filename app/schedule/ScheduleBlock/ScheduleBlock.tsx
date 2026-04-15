@@ -17,6 +17,7 @@ export default function ScheduleBlock({
   progress,
   flights,
 }: TimelineBlock) {
+  console.log(actualDuration, "act");
   return (
     <div className="chbi-lifting-schedule-info">
       <div className="chbi-lifting-circle-time">
@@ -33,10 +34,57 @@ export default function ScheduleBlock({
           <div className="chbi-lifting-schedule-info-text-container">
             <p className="chbi-lifting-schedule-athletes">{divisions}</p>
             <div className="chbi-lifting-schedule-extra-text">
-              <p className="chbi-lifting-schedule-athletes">Duration: </p>
-              <p className="chbi-lifting-secondary-text">&nbsp;{duration}</p>
-              <p className="chbi-lifting-schedule-athletes">&nbsp; Room: </p>
-              <p className="chbi-lifting-secondary-text">&nbsp;{room} </p>
+              <p className="chbi-lifting-schedule-athletes"></p>
+              {duration ? (
+                <>
+                  {" "}
+                  <p className="chbi-lifting-schedule-athletes">Duration: </p>
+                  <p className="chbi-lifting-secondary-text">
+                    &nbsp;{duration}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+              {room ? (
+                <>
+                  {" "}
+                  <p className="chbi-lifting-schedule-athletes">
+                    &nbsp; Room:{" "}
+                  </p>
+                  <p className="chbi-lifting-secondary-text">&nbsp;{room} </p>
+                </>
+              ) : (
+                ""
+              )}
+              {estimatedEnd ? (
+                <>
+                  {" "}
+                  <p className="chbi-lifting-schedule-athletes">
+                    &nbsp; Estimated End:{" "}
+                  </p>
+                  <p className="chbi-lifting-secondary-text">
+                    &nbsp;{estimatedEnd}{" "}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+              {actualDuration ? (
+                <>
+                  {" "}
+                  <p className="chbi-lifting-schedule-athletes">
+                    &nbsp; Actual Duration:{" "}
+                  </p>
+                  <p className="chbi-lifting-secondary-text">
+                    &nbsp;{actualDuration}{" "}
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
+              {/* <p className="chbi-lifting-schedule-athletes">&nbsp; Room: </p>
+              <p className="chbi-lifting-secondary-text">&nbsp;{room} </p> */}
             </div>
           </div>
           <div className="chbi-lifting-info-flight-information">
